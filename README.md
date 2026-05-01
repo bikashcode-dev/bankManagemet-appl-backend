@@ -8,7 +8,7 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Layered-007396?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
-> A console-based banking application built to demonstrate real-world use of Core Java through clean, layered architecture — no frameworks, no shortcuts.
+> A console-based banking application built to demonstrate real-world use of Core Java through clean, layered architecture —  and oops principal.
 
 </div>
 
