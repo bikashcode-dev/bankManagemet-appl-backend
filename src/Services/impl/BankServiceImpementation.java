@@ -29,7 +29,7 @@ public class BankServiceImpementation implements BankingService {
 //
 //  validation cheak )))))))):((((((((((
     private final Validation<String> validationname = name ->{
-        if(name==null||name.isEmpty())throw new ValidationException("Name khali nhi chorna hai  ");
+        if(name==null||name.isEmpty())throw new ValidationException("Name khali nhi chorna hai ? Name not be empty");
     };
     private final Validation<String> validationemail = email->{
         if( email==null||email.isEmpty()||!email.contains("@")) throw new ValidationException("Email is empty and must be contains @ ");
@@ -82,7 +82,7 @@ public class BankServiceImpementation implements BankingService {
                 account.setBalance(account.getBalance()-amount);
             }
             else{
-                IO.println("Insufficient balance");
+                IO.println("Insufficient balance ? paisa kam hai ");
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -94,7 +94,7 @@ public class BankServiceImpementation implements BankingService {
 
     @Override
     public void transfer(String fromAccount, String toAcount, double amount, String note) {
-        if(fromAccount.equals(toAcount)) throw new ValidationException( "Galat Acount dala hai : "+fromAccount);
+        if(fromAccount.equals(toAcount)) throw new ValidationException( "Galat Acount dala hai ? Enter an AC no : "+fromAccount);
 
          Account account1 = accountRepositery.findByNumber(fromAccount)
                  .orElseThrow(() -> new AccoutNotFoundExecption("Account number not found :" + fromAccount));
