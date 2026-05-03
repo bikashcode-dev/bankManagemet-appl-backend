@@ -8,16 +8,16 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Layered-007396?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
-> A console-based banking application built to demonstrate real-world use of Core Java through clean, layered architecture —  and oops principal.
+> A console-based banking application built to demonstrate real-world use of Core Java through clean, layered architecture — no frameworks, no shortcuts.
 
 </div>
 
 ---
 
-##  Note
+## 📝 Note
 
 > This project was originally developed during my Core Java learning phase.
-> Due to loss of access to my previous GitHub account, it has been migrated and re-uploaded here.and impove code and validation , add new feature
+> Due to loss of access to my previous GitHub account, it has been migrated and re-uploaded here.
 
 ---
 
@@ -29,7 +29,7 @@ This project is that foundation. Every design decision here mirrors patterns use
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
 
 ```
 ConsoleBankingSystem/
@@ -67,52 +67,3 @@ ConsoleBankingSystem/
 - Input validation with custom exceptions
 
 ---
-
-## 🔑 Design Highlights
-
-**Interface before implementation** — every service starts as a contract:
-```java
-public interface BankingService {
-    void deposit(String accountId, double amount);
-    void withdraw(String accountId, double amount) throws InsufficientFundsException;
-    void transfer(String fromId, String toId, double amount);
-}
-```
-
----
-
-##  Tech Stack
-
-- **Java (Core Java)** — entire application, zero external libraries
-- **Java Collections Framework** — `ArrayList`, `HashMap` for in-memory storage
-- **Git & GitHub** — version control
-
----
-
-##  How to Run
-
-```bash
-git clone https://github.com/yourusername/ConsoleBankingSystem.git
-cd ConsoleBankingSystem
-javac -d out src/**/*.java
-java -cp out app.Main
-```
-
----
-
-##  What's Next
-
-This project is built as a practice-focused application to strengthen Core Java and OOP fundamentals.
-
-Future versions planned:
-- [ ] JDBC + MySQL — replace in-memory storage with real persistence
-- [ ] JUnit — unit tests for all service methods
-- [ ] Spring Boot — convert to a REST API
-
----
-
-<div align="center">
-
-*Built to learn the foundation — before standing on it.*
-
-</div>
