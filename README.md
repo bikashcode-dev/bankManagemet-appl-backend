@@ -67,3 +67,73 @@ ConsoleBankingSystem/
 - Input validation with custom exceptions
 
 ---
+
+
+## 🔑 Design Highlights
+
+**Interface before implementation** — every service starts as a contract:
+```java
+public interface BankingService {
+    void deposit(String accountId, double amount);
+    void withdraw(String accountId, double amount) throws InsufficientFundsException;
+    void transfer(String fromId, String toId, double amount);
+}
+```
+
+**Domain-specific exceptions** — no generic error messages:
+```java
+public class InsufficientFundsException extends RuntimeException {
+    public InsufficientFundsException(double available, double requested) {
+        super("Cannot withdraw ₹" + requested + ". Available: ₹" + available);
+    }
+}
+```
+
+**Repository pattern** — data access cleanly separated from business logic:
+```java
+public class AccountRepository {
+    private final Map<String, Account> store = new HashMap<>();
+
+    public void save(Account account) { store.put(account.getId(), account); }
+    public Optional<Account> findById(String id) { return Optional.ofNullable(store.get(id)); }
+}
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Java (Core Java)** — entire application, zero external libraries
+- **Java Collections Framework** — `ArrayList`, `HashMap` for in-memory storage
+- **Git & GitHub** — version control
+
+---
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/yourusername/ConsoleBankingSystem.git
+cd ConsoleBankingSystem
+javac -d out src/**/*.java
+java -cp out app.Main
+```
+
+---
+
+## 🔭 What's Next
+
+This project is built as a practice-focused application to strengthen Core Java and OOP fundamentals.
+
+Future versions planned:
+- [ ] JDBC + MySQL — replace in-memory storage with real persistence
+- [ ] JUnit — unit tests for all service methods
+- [ ] Spring Boot — convert to a REST API
+
+---
+
+<div align="center">
+
+*Built to learn the foundation — before standing on it.*
+
+</div>
+
