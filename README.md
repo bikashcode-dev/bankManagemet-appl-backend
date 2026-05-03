@@ -16,13 +16,13 @@
 
 ---
 
-## 💡 Why I Built This
+##  Why I Built This
 
 Before jumping to Spring Boot, I wanted to understand what happens underneath — how layers communicate, how exceptions carry meaning, and how OOP applies to real problems. This project is that foundation.
 
 ---
 
-## 🧠 OOP Concepts Applied
+##  OOP Concepts Applied
 
 | Concept | How It's Used |
 |---|---|
@@ -35,7 +35,7 @@ Before jumping to Spring Boot, I wanted to understand what happens underneath �
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ConsoleBankingSystem/
@@ -49,7 +49,7 @@ ConsoleBankingSystem/
 
 ---
 
-## ✅ Features
+##  Features
 
 - Create customer and bank account
 - Deposit and withdraw funds
@@ -59,20 +59,11 @@ ConsoleBankingSystem/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 `Java (Core)` · `Java Collections Framework` · `Git & GitHub`
 
 ---
-
-## 🚀 How to Run
-
-```bash
-git clone https://github.com/yourusername/ConsoleBankingSystem.git
-cd ConsoleBankingSystem
-javac -d out src/**/*.java
-java -cp out app.Main
-```
 
 ---
 
