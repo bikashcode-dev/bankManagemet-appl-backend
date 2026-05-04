@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("                                  Welcome to Banking Applica1tion");
-        boolean RunningStatus=true;
+        System.out.println("    Welcome to Banking Applica1tion , create your ac ");
+        boolean RunningStatus = true;
         BankingService bankingService = new BankServiceImpementation();
 
         while (RunningStatus) {
@@ -21,7 +21,7 @@ public class Main {
                      5. Account Statement
                      6. List of Accounts
                      7. Search Account
-                     8. Press Ec=xit""");
+                     8. Press Ec = exit""");
             IO.print("Enter choice: ");
             String choice = sc.nextLine().trim();
             IO.print(choice +  " Choice");
@@ -108,14 +108,14 @@ public class Main {
         String byAccountNumber = sc.nextLine().trim();
 
         bankingService.getStatment(byAccountNumber).forEach(c ->{
-            System.out.println("AC NO :"+ c.getAccountNumber() +" | UID "+ c.getTransactionID()+" | Rs."+c.getAmount()+" | TG ID :"+ c.getDateTime());
+            System.out.println(" Ac number:" + c.getAccountNumber() +" | UID "+ c.getTransactionID()+" | Rs." + c.getAmount() + " | TG ID :"+ c.getDateTime());
         });
     }
 
 
     private static void listofAccount(Scanner sc,BankingService bankingService){
         bankingService.listofAccounts().forEach(a ->{
-            System.out.println(a.getAcountNumber() + " | "+a.getAccounTtype()+" | " + a.getBalance());
+            System.out.println(a.getAcountNumber() + " | "+a.getAccounTtype() + " | " + a.getBalance());
         });
     }
     private static void SearchAccount(Scanner sc,BankingService bankingService){
