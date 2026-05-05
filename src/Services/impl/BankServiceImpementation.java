@@ -32,7 +32,7 @@ public class BankServiceImpementation implements BankingService {
         if(name==null||name.isEmpty())throw new ValidationException("Name khali nhi chorna hai ? Name not be empty");
     };
     private final Validation<String> validationemail = email->{
-        if( email==null||email.isEmpty()||!email.contains("@")) throw new ValidationException("Email is empty and must be contains @ ");
+        if(email.isEmpty()||!email.contains("@")) throw new ValidationException("Email is empty and must be contains @ ");
     };
 
     private final Validation<String> validationaAccountType = accountType->{
