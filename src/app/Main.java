@@ -8,15 +8,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("    Welcome to Banking Applica1tion , create your ac ");
+        System.out.println("    Welcome to Banking Applica1tion ");
         boolean RunningStatus = true;
         BankingService bankingService = new BankServiceImpementation();
 
         while (RunningStatus) {
             System.out.println("""  
                      1. Open Account
+                               
                      2. Deposit
                      3. Withdraw
+                               
                      4. Transfer amount
                      5. Account Statement
                      6. List of Accounts
@@ -54,7 +56,7 @@ public class Main {
         IO.println("Enter Account Type ( SAVING ACCOUNT | CURRENT ACCOUNT (:");
         String accountType = sc.nextLine().trim();
 
-        IO.println("Enter amount to deposit:-(optional)");
+        IO.println("Enter amount to deposit(optional)");
         String amount = sc.nextLine().trim();
         if(amount.isBlank()) {amount = "0";}
 
