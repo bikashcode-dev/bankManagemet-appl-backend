@@ -70,7 +70,6 @@ ConsoleBankingSystem/
 ## 🔭 What's Next
 
 - [ ] JDBC + MySQL — persistent storage
-- [ ] JUnit — unit tests for all services  
 - [ ] Spring Boot — convert to REST API
 
 ---
